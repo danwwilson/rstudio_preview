@@ -26,6 +26,7 @@ RUN apt-get update \
     psmisc \
     procps \
     python-setuptools \
+    libxkbcommon-x11-0 \
     sudo \
     wget \
   && if [ -z "$RSTUDIO_VERSION" ]; \
