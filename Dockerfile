@@ -28,6 +28,7 @@ RUN apt-get update \
     python-setuptools \
     libxkbcommon-x11-0 \
     libpq5 \
+    ssh \
     sudo \
     wget \
   && if [ -z "$RSTUDIO_VERSION" ]; \
