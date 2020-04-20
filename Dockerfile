@@ -96,6 +96,7 @@ COPY add_shiny.sh /etc/cont-init.d/add
 COPY disable_auth_rserver.conf /etc/rstudio/disable_auth_rserver.conf
 COPY pam-helper.sh /usr/lib/rstudio-server/bin/pam-helper
 COPY fonts /usr/share/fonts
+COPY fonts /etc/rstudio/fonts
 
 ## Update font cache
 RUN fc-cache -f -v
