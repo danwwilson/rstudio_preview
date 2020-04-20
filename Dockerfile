@@ -94,8 +94,13 @@ COPY userconf.sh /etc/cont-init.d/userconf
 COPY add_shiny.sh /etc/cont-init.d/add
 COPY disable_auth_rserver.conf /etc/rstudio/disable_auth_rserver.conf
 COPY pam-helper.sh /usr/lib/rstudio-server/bin/pam-helper
+COPY fonts /usr/share/fonts
+
+## Update font cache
+RUN fc-cache -f -v
 
 EXPOSE 8787
+EXPOSE 22
 
 ## automatically link a shared volume for kitematic users
 VOLUME /home/rstudio/kitematic
