@@ -30,7 +30,7 @@ RUN apt-get update \
     sudo \
     wget \
   && if [ -z "$RSTUDIO_VERSION" ]; \
-    then RSTUDIO_URL="https://s3.amazonaws.com/rstudio-ide-build/server/bionic/amd64/rstudio-server-1.3.944-amd64.deb"; \
+    then RSTUDIO_URL="https://s3.amazonaws.com/rstudio-ide-build/server/bionic/amd64/rstudio-server-1.4.215-amd64.deb"; \
     else RSTUDIO_URL="http://download2.rstudio.org/server/bionic/amd64/rstudio-server-${RSTUDIO_VERSION}-amd64.deb"; fi \
   && wget -q $RSTUDIO_URL \
   && dpkg -i rstudio-server-*-amd64.deb \
