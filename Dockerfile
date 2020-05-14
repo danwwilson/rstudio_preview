@@ -1,4 +1,4 @@
-FROM rocker/r-ver:3.6.3
+FROM rocker/r-ubuntu:20.04
 
 ARG RSTUDIO_VERSION
 #ENV RSTUDIO_VERSION=${RSTUDIO_VERSION:-1.2.5033}
@@ -30,9 +30,34 @@ RUN apt-get update \
     libpq5 \
     ssh \
     sudo \
+    libgit2-dev \
+    libxml2-dev \
+    libcairo2-dev \
+    liblapack-dev \
+    liblapack3 \
+    libopenblas-base \
+    libopenblas-dev \
+    libpq-dev \
+    default-jdk \
+    libbz2-dev \
+    libicu-dev \
+    liblzma-dev \
+    libv8-dev \
+    openssh-client \
+    mdbtools \
+    libmagick++-dev \
+    libsnappy-dev \
+    autoconf \
+    automake \
+    libtool \
+    python-dev \
+    pkg-config \
+    p7zip-full \
+    libzmq3-dev \
     wget \
+  && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
   && if [ -z "$RSTUDIO_VERSION" ]; \
-    then RSTUDIO_URL="https://s3.amazonaws.com/rstudio-ide-build/server/bionic/amd64/rstudio-server-1.4.215-amd64.deb"; \
+    then RSTUDIO_URL="https://s3.amazonaws.com/rstudio-ide-build/server/bionic/amd64/rstudio-server-1.4.335-amd64.deb"; \
     else RSTUDIO_URL="http://download2.rstudio.org/server/bionic/amd64/rstudio-server-${RSTUDIO_VERSION}-amd64.deb"; fi \
   && wget -q $RSTUDIO_URL \
   && dpkg -i rstudio-server-*-amd64.deb \
@@ -102,9 +127,8 @@ COPY fonts /etc/rstudio/fonts
 RUN fc-cache -f -v
 
 EXPOSE 8787
-EXPOSE 22
 
 ## automatically link a shared volume for kitematic users
-VOLUME /home/rstudio/kitematic
+VOLUME /home/rstudio
 
 CMD ["/init"]
