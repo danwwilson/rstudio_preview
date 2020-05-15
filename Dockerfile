@@ -6,7 +6,7 @@ LABEL org.label-schema.license="GPL-2.0" \
       maintainer="Carl Boettiger <cboettig@ropensci.org>"
 
 ENV S6_VERSION=v1.21.7.0
-ENV RSTUDIO_VERSION=preview
+ENV RSTUDIO_VERSION=daily
 ENV PATH=/usr/lib/rstudio-server/bin:$PATH
 
 
