@@ -9,6 +9,10 @@ ENV S6_VERSION=v1.21.7.0
 ENV RSTUDIO_VERSION=daily
 ENV PATH=/usr/lib/rstudio-server/bin:$PATH
 
+RUN apt-get update \
+  apt-get install -y --no-install-recommends \ 
+  libpq5
+
 
 RUN /rocker_scripts/install_rstudio.sh
 RUN /rocker_scripts/install_pandoc.sh
