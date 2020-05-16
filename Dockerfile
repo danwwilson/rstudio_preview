@@ -10,7 +10,7 @@ ENV RSTUDIO_VERSION=daily
 ENV PATH=/usr/lib/rstudio-server/bin:$PATH
 
 RUN apt-get update \
-  apt-get install -y --no-install-recommends \ 
+&&  apt-get install -y --no-install-recommends \ 
   libpq5
 
 
