@@ -1,0 +1,45 @@
+{
+    "reuse_sessions_for_project_links": true,
+    "server_editor_font_enabled": true,
+    "server_editor_font": "VictorMono",
+    "posix_terminal_shell": "bash",
+    "editor_theme": "Eclipse",
+    "panes": {
+        "quadrants": [
+            "Source",
+            "TabSet1",
+            "Console",
+            "TabSet2"
+        ],
+        "tabSet1": [
+            "Environment",
+            "Connections",
+            "Build",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "VCS",
+            "Viewer"
+        ],
+        "hiddenTabSet": [
+            "History",
+            "Tutorial"
+        ],
+        "console_left_on_top": false,
+        "console_right_on_top": true
+    },
+    "restore_source_documents": false,
+    "console_double_click_select": true,
+    "save_workspace": "never",
+    "load_workspace": false,
+    "show_last_dot_value": true,
+    "always_save_history": false,
+    "restore_last_project": false,
+    "syntax_color_console": true,
+    "auto_append_newline": true,
+    "strip_trailing_whitespace": true
+}

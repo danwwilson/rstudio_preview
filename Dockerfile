@@ -17,6 +17,9 @@ RUN apt-get update \
 RUN /rocker_scripts/install_rstudio.sh
 RUN /rocker_scripts/install_pandoc.sh
 
+COPY settings/addins.json /home/${DEFAULT_USER}/keybindings/addins.json
+COPY settings/rstudio-prefs.json /home/${DEFAULT_USER}/keybindings/rstudio-prefs.json
+
 COPY fonts /usr/share/fonts
 COPY fonts /etc/rstudio/fonts
 
