@@ -20,8 +20,8 @@ RUN /rocker_scripts/install_verse.sh
 
 RUN mkdir /home/${DEFAULT_USER}/.config/rstudio/keybindings/
 
-COPY settings/addins.json /home/${DEFAULT_USER}/.config/rstudio/keybindings/
-COPY settings/rstudio-prefs.json /home/${DEFAULT_USER}/.config/rstudio/
+COPY settings/addins.json /home/rstudio/.config/rstudio/keybindings/
+COPY settings/rstudio-prefs.json /home/rstudio/.config/rstudio/
 
 COPY fonts /usr/share/fonts
 COPY fonts /etc/rstudio/fonts
