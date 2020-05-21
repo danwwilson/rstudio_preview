@@ -3,7 +3,6 @@
     "server_editor_font_enabled": true,
     "server_editor_font": "VictorMono",
     "posix_terminal_shell": "bash",
-    "editor_theme": "Eclipse",
     "panes": {
         "quadrants": [
             "Source",
